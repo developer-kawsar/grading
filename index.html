@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  <style type="text/css" media="all">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+     background-color: #DEE0F5
+    }
+   .container{
+     background-color: white;
+     width: 85%;
+     margin: 0 auto;
+     min-height: 90vh;
+     padding-top: 100px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 20px;
+     border-radius: 4px;
+     box-shadow: 5px 4px 20px #85A08B;
+   }
+   input{
+     height: 40px;
+     outline: none;
+     border: 3px solid #2A39E3;
+     padding :2px 10px;
+     border-radius: 5px;
+   }
+  .button-div{
+    padding-top: 20px;
+  }
+  .btn{
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border:none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 7px;
+  }
+ .output{
+   border:2px solid red;
+   height: 300px;
+   width: 85%;
+   margin-top: 50px;
+   border-radius: 4px;
+   padding: 5px;
+ }
+ p{
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+ }
+  </style>
+  
+  <!-- HTML -->
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="input">
+      <input type="number" name="" id="" value="" placeholder="Input Avarage Number"/>
+      
+    </div>
+    <div class="button-div">
+      <button type="submit" class="btn">CHECK GRADE</button>
+    </div>
+    <div class="output">
+      <p></p>
+    </div>
+    
+  </div>
+  
+
+  <!-- Project -->
+  <script>
+    let input =document.querySelector('input')
+let button=document.querySelector('button')
+let p=document.querySelector('p')
+let txt='Your Grade Is:'
+button.addEventListener("click",function(){
+  var val=Number(input.value)
+  if(val>=80 && val<=100){
+    p.innerHTML=`${txt} A+`
+  }else if(val>=70  && val<80){
+    p.innerHTML=`${txt} A`
+  }else if (val >= 60 && val<70) {
+  p.innerHTML=`${txt} A-`
+  }else if (val >= 50  && val<60) {
+  p.innerHTML=`${txt} B`
+  }else if (val >= 40  && val<50) {
+  p.innerHTML=`${txt} C`
+  }else if (val >= 33  && val<40) {
+  p.innerHTML=`${txt} D`
+  }else if (val >= 0  && val<33) {
+    p.innerHTML = `${txt} F`
+  }else{
+    p.innerHTML='Input a valid Number'
+  }
+  
+})
+  </script>
+  
+  
+</body>
+</html>
